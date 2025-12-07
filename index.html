@@ -24,7 +24,7 @@
             console.log(`✅ 접속 성공! (클라이언트 ID: ${clientId})`);
     
             // 2. 접속 성공 후 토픽 구독
-            const topic = `ewha/0317137263`; // 다른 사용자와 겹치지 않도록 고유한 토픽 사용, 본인학번으로 수정
+            const topic = `ewha/sensor/73`; // 다른 사용자와 겹치지 않도록 고유한 토픽 사용, 본인학번으로 수정
             client.subscribe(topic, (err) => {
                 if (!err) {
                     console.log(`📄 토픽 구독 성공: ${topic}`);
@@ -44,7 +44,7 @@
         client.on('message', (topic, message) => {
             console.log(`${topic} ${message.toString()}`);
             // 1. id가 'main'인 div 요소를 찾습니다.
-            const mainDiv = document.getElementById('main');
+            const mainDiv = document.getElementById('73T0');
     
             // 2. 새로 추가할 HTML 코드를 문자열로 만듭니다. (백틱 `` 사용)
             const messageHTML = `
